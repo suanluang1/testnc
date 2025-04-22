@@ -1,42 +1,31 @@
----
-title: Suanluang Rama IX
-hero_title: Suanluang Rama IX
-hero_subtitle: Thailand's largest botanical garden
-button_text: Click to Explore
-button_link: "#about"
-about_title: A Royal Legacy
-about_text: >-
-  Suanluang Rama IX, also referred to as King Rama IX Park, is Bangkok's largest
-  public park spanning 500 rai (80 hectares) in the Prawet District.
-
-
-  Established in 1987 to commemorate King Bhumibol Adulyadej's 60th birthday, this botanical paradise was officially opened by the King himself on December 1, 1987.
----
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Suanluang Rama IX</title>
+  <title>{{ title }}</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   <style>
     body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
     .hero { text-align: center; padding: 100px 20px; background-color: #2c3e50; color: white; }
+    .hero h1 { font-size: 2.5em; margin-bottom: 10px; }
+    .hero p { font-size: 1.2em; margin-bottom: 25px; }
     .button { display: inline-block; padding: 10px 20px; background-color: #27ae60; color: white; text-decoration: none; border-radius: 4px; }
     #about { padding: 40px 20px; max-width: 800px; margin: 0 auto; }
   </style>
 </head>
 <body>
+  <!-- Hero Section -->
   <div class="hero">
-    <h1>Suanluang Rama IX</h1>
-    <p>Thailand's largest botanical garden</p>
-    <a href="#about" class="button">Explore the Garden</a>
+    <h1>{{ hero_title }}</h1>
+    <p>{{ hero_subtitle }}</p>
+    <a href="#about" class="button">{{ button_text }}</a>
   </div>
 
+  <!-- About Section -->
   <div id="about">
-    <h2>A Royal Legacy</h2>
-    <p>Suanluang Rama IX, also referred to as King Rama IX Park, is Bangkok's largest public park spanning 500 rai (80 hectares) in the Prawet District.</p>
-    <p>Established in 1987 to commemorate King Bhumibol Adulyadej's 60th birthday, this botanical paradise was officially opened by the King himself on December 1, 1987.</p>
+    <h2>{{ about_title }}</h2>
+    <div>{{ about_content }}</div>
   </div>
 
   <script>
